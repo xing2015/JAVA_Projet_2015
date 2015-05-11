@@ -5,16 +5,21 @@
  */
 package View;
 
+import Model.Module;
+
 /**
  *
  * @author IT
  */
 public class PanelModule2 extends javax.swing.JPanel {
-
+    private final Module[] module;
     /**
      * Creates new form PanelModule2
      */
     public PanelModule2() {
+        module = new Module[]{
+            //new Module{};
+        };
         initComponents();
     }
 

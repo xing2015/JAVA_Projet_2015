@@ -5,17 +5,36 @@
  */
 package Model;
 
+import java.awt.Color;
+
 /**
  *
  * @author IT
  */
 public class Formation {
+    private String nom;
+    private int duree;
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
+    public Formation(String nom, int duree) {
+        this.nom = nom;
+        this.duree = duree;
     }
+
+    public String getNom() {
+        return nom;
+    }
+
+    public void setNom(String nom) {
+        this.nom = nom;
+    }
+
+    public int getDuree() {
+        return duree;
+    }
+
+    public void setDuree(int duree) {
+        this.duree = duree;
+    }
+    
     
 }
