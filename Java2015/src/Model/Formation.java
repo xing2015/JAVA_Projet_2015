@@ -14,6 +14,7 @@ import java.awt.Color;
 public class Formation {
     private String nom;
     private int duree;
+    private Module[] listeModule;
 
     public Formation(String nom, int duree) {
         this.nom = nom;
@@ -34,6 +35,14 @@ public class Formation {
 
     public void setDuree(int duree) {
         this.duree = duree;
+    }
+    
+    public void setListeModule(Module m) {
+        
+    }  
+    
+    public void getListeModule() {
+        
     }
     
     
