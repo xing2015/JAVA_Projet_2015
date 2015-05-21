@@ -38,7 +38,7 @@ public class FrameMain extends javax.swing.JFrame {
     private void initComponents() {
 
         jTabbedPane1 = new javax.swing.JTabbedPane();
-        panelFormation1 = new View.PanelFormation();
+        panelFormation1 = new Controler.PanelFormation();
         panelCalendrier1 = new View.PanelCalendrier();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
@@ -47,7 +47,7 @@ public class FrameMain extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jTabbedPane1.addTab("Formation", panelFormation1);
+        jTabbedPane1.addTab("tab2", panelFormation1);
         jTabbedPane1.addTab("Calendrier", panelCalendrier1);
 
         jMenu1.setText("File");
@@ -153,6 +153,6 @@ public class FrameMain extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JTabbedPane jTabbedPane1;
     private View.PanelCalendrier panelCalendrier1;
-    private View.PanelFormation panelFormation1;
+    private Controler.PanelFormation panelFormation1;
     // End of variables declaration//GEN-END:variables
 }

@@ -72,11 +72,11 @@
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout"/>
       <SubComponents>
-        <Component class="View.PanelFormation" name="panelFormation1">
+        <Component class="Controler.PanelFormation" name="panelFormation1">
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
-              <JTabbedPaneConstraints tabName="Formation">
-                <Property name="tabTitle" type="java.lang.String" value="Formation"/>
+              <JTabbedPaneConstraints tabName="tab2">
+                <Property name="tabTitle" type="java.lang.String" value="tab2"/>
               </JTabbedPaneConstraints>
             </Constraint>
           </Constraints>

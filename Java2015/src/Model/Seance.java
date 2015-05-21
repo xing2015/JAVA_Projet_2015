@@ -10,5 +10,5 @@ package Model;
  * @author IT
  */
 public class Seance {
-    
+    Date date;
 }

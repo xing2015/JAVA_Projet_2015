@@ -9,7 +9,7 @@ import java.awt.Color;
 
 /**
  *
- * @author IT
+ * @author xing
  */
 public class Formation {
     private String nom;
