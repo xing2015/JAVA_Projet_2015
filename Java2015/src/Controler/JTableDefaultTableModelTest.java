@@ -5,8 +5,12 @@
  */
 package Controler;
 
-import static com.sun.xml.internal.fastinfoset.alphabet.BuiltInRestrictedAlphabets.table;
+/**
+ *
+ * @author IT
+ */
 import java.awt.BorderLayout;
+import java.awt.PopupMenu;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
@@ -20,39 +24,37 @@ import javax.swing.JTable;
 import javax.swing.JTextField;
 import javax.swing.ListSelectionModel;
 import javax.swing.table.DefaultTableModel;
+//维护表格
 
-/**
- *
- * @author xing
- */
-public class PanelModule2 extends JPanel {
+public class JTableDefaultTableModelTest extends JFrame {
 
+    private DefaultTableModel tableModel;  
     private JTable moduleTable;
-    private DefaultTableModel tableModel;
-    private JScrollPane jScrollPane1;
+    private JPanel panel;
     private JTextField moduleText;
     private JTextField abbText;
     private JTextField colorText;
     private JTextField seanceText;
-    private JPanel panel;
-    
-    public PanelModule2() {
+
+    public JTableDefaultTableModelTest() {
+        super();
+        setTitle("Liste des modules");
+        setBounds(10,10,700,200);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         initComponents();
     }
 
     private void initComponents() {
-        jScrollPane1 = new JScrollPane();
+        JScrollPane jScrollPane1 = new JScrollPane();
 
         Object[][] mRow = {
-            {null, null, null, null},
-            {null, null, null, null},
-            {null, null, null, null},
-            {null, null, null, null}
+            
         };
         Object[] mCol = {"Module", "abbreviation", "Couleur", "Nombre de séance"};
         tableModel = new DefaultTableModel(mRow, mCol);
         moduleTable = new JTable(tableModel);
         jScrollPane1.setViewportView(moduleTable);
+        getContentPane().add(jScrollPane1,BorderLayout.CENTER);
 
         moduleTable.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
 
@@ -69,22 +71,22 @@ public class PanelModule2 extends JPanel {
         }
         );
 
-         panel = new JPanel();
-        // getContentPane().add(panel, BorderLayout.SOUTH);
+        panel = new JPanel();
+         getContentPane().add(panel, BorderLayout.SOUTH);
         panel.add(new JLabel("Module: "));
-        moduleText = new JTextField("A4", 10);
+        moduleText = new JTextField("Java", 5);
         panel.add(moduleText);
 
         panel.add(new JLabel("Abb: "));
-        abbText = new JTextField("B4", 10);
+        abbText = new JTextField("java", 5);
         panel.add(abbText);
 
         panel.add(new JLabel("Color: "));
-        colorText = new JTextField("B4", 10);
+        colorText = new JTextField("red", 5);
         panel.add(colorText);
 
         panel.add(new JLabel("Seance: "));
-        seanceText = new JTextField("B4", 10);
+        seanceText = new JTextField("50h", 5);
         panel.add(seanceText);
 
         final JButton addButton = new JButton("Ajouter");
@@ -130,5 +132,13 @@ public class PanelModule2 extends JPanel {
         panel.add(delButton);
     }
 
-
+    
+  /**
+     * @param args
+     */
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+        JTableDefaultTableModelTest jTableDefaultTableModelTest = new JTableDefaultTableModelTest();
+        jTableDefaultTableModelTest.setVisible(true);
+    }
 }
